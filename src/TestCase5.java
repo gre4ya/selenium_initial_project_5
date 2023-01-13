@@ -12,6 +12,7 @@ public class TestCase5 {
 
         driver.findElement(By.xpath("(//ul/li)[5]/a")).click();
         Waiter.pause(2);
+        //driver.findElement(By.id("dismiss-button")).click();
 
         Alert alert = driver.switchTo().alert();
         alert.dismiss();
@@ -23,6 +24,6 @@ public class TestCase5 {
                 "Validation of navigation PASSED" : "Validation of navigation FAILED");
 
 
-       // Driver.quitDriver();
+        Driver.quitDriver();
     }
 }
