@@ -4,15 +4,17 @@ import org.openqa.selenium.WebDriver;
 import utils.Driver;
 import utils.Waiter;
 
+import java.util.concurrent.TimeUnit;
+
 public class TestCase5 {
     public static void main(String[] args) {
         WebDriver driver = Driver.getDriver();
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
         driver.get("https://automationexercise.com/");
-        Waiter.pause(2);
 
         driver.findElement(By.xpath("(//ul/li)[5]/a")).click();
-        Waiter.pause(2);
-        //driver.findElement(By.id("dismiss-button")).click();
+        driver.findElement(By.id("dismiss-button")).click();
 
         Alert alert = driver.switchTo().alert();
         alert.dismiss();
