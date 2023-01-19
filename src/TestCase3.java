@@ -26,8 +26,8 @@ public class TestCase3 {
                 "Text \"" + footerElement.getText() + "\" IS Displayed" :
                 "Text \"" + footerElement.getText() + "\" IS NOT Displayed");
 
-//        System.out.println(footerElement.getText().contains("Get the most recent updates from our site and be updated your self...") ?
-//                "Text Validation PASSED" : "Text Validation FAILED");
+        System.out.println(footerElement.getText().contains("Get the most recent updates from\nour site and be updated your self...") ?
+                "Text Validation PASSED" : "Text Validation FAILED");
 
         Driver.quitDriver();
     }

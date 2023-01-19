@@ -9,16 +9,14 @@ import java.util.concurrent.TimeUnit;
 public class TestCase5 {
     public static void main(String[] args) {
         WebDriver driver = Driver.getDriver();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+       // driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
         driver.get("https://automationexercise.com/");
 
         driver.findElement(By.xpath("(//ul/li)[5]/a")).click();
-        driver.findElement(By.id("dismiss-button")).click();
+        Waiter.pause(3);
 
-        Alert alert = driver.switchTo().alert();
-        alert.dismiss();
-
+       // driver.findElement(By.xpath("(//ul/li)[5]/a")).click();
 
 
 
